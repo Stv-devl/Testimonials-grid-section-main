@@ -46,7 +46,7 @@ body {
   margin: auto;
 }
 /*****Setting text board 1, 2, 4*****/
-.board1-text h3,
+.board1-text h1,
 .board2-text h3,
 .board4-text h3 {
   font-size: 0.9em;
