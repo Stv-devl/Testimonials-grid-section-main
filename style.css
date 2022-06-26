@@ -1,0 +1,279 @@
+/*****Font choice*****/
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+}
+/*****Project colors*****/
+:root {
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+
+  --VerifiedGraduate: hsl(0, 0%, 100%, 0.5);
+  --Reviewparagraphs: hsl(0, 0%, 100%, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+/*****Body and background setting*****/
+
+body {
+  min-height: 100vh;
+  background-color: var(--Lightgrayishblue);
+  font-size: 13px;
+}
+
+/*****Grid for center elements*****/
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+}
+/*****Setting text board 1, 2, 4*****/
+.board1-text h3,
+.board2-text h3,
+.board4-text h3 {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--White);
+  margin-left: 15px;
+}
+
+.board1-text p,
+.board2-text p,
+.board4-text p {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: var(--VerifiedGraduate);
+  margin-left: 15px;
+}
+
+.board1-text2 h2,
+.board2-text2 h2,
+.board4-text2 h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--White);
+  margin: 0 6%;
+}
+.board1-text2 p,
+.board2-text2 p,
+.board4-text2 p {
+  font-size: 1em;
+  line-height: 16.5px;
+  font-weight: 500;
+  color: var(--Reviewparagraphs);
+  margin: 4% 6%;
+}
+
+/*****Setting text board 3, 5,*****/
+
+.board3-text h3,
+.board5-text h3 {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--Verydarkgrayishblue);
+  margin-left: 15px;
+}
+
+.board3-text p,
+.board5-text p {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: hsl(17, 19%, 35%, 0.5);
+  margin-left: 15px;
+}
+
+.board3-text2 h2,
+.board5-text2 h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--Verydarkgrayishblue);
+  margin: 10% 12% 0 12%;
+}
+
+.board3-text2 p,
+.board5-text2 p {
+  font-size: 1em;
+  font-weight: 500;
+  color: hsl(217, 19%, 35%, 0.7);
+  margin: 12% 12%;
+  line-height: 16.5px;
+}
+
+/*****Grid complex for 5 boards, 4 columns and 2 lignes, gaps of 24px and 30px*****/
+
+.grid-complex {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 255px 255px 255px 255px; /*colonnes*/
+  grid-template-rows: 280px 265px; /*lignes*/
+  grid-template-areas:
+    "t1 t1 t2 t5"
+    "t3 t4 t4 t5";
+  row-gap: 24px;
+  column-gap: 30px;
+}
+/*****Board 1 => attribution, position relative*****/
+.board1 {
+  grid-area: t1;
+  background: var(--Moderateviolet);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 356px 0;
+}
+
+/*****Board 2=> attribution & color*****/
+.board2 {
+  grid-area: t2;
+  background: var(--Verydarkgrayishblue);
+}
+/*****Board 3=> attribution & color*****/
+.board3 {
+  grid-area: t3;
+  background: var(--White);
+}
+
+/*****Board 4=> attribution & color*****/
+.board4 {
+  grid-area: t4;
+  background: var(--Verydarkblackishblue);
+}
+
+/*****Board 5=> attribution & color*****/
+.board5 {
+  grid-area: t5;
+  background: var(--White);
+}
+
+/*****Board 1,2,3,4, 5=> size at 100% of Grid and radius*****/
+.board1,
+.board2,
+.board3,
+.board4,
+.board5 {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0px 20px 30px 0px hsla(220, 2%, 33%, 0.3);
+}
+
+/*Grid for img + name on 5 boards*/
+.board1-grid,
+.board2-grid,
+.board3-grid,
+.board4-grid,
+.board5-grid {
+  display: grid;
+  grid-template-columns: 30px 120px;
+  grid-template-rows: 30px;
+  margin: 24px 15px 20px 30px;
+}
+
+.board1-img {
+  background: url(./images/image-daniel.jpg) center/cover;
+  border: 2px solid hsl(263, 60%, 71%);
+}
+
+.board2-img {
+  background: url(./images/image-jonathan.jpg) center/cover;
+}
+
+.board3-img {
+  background: url(./images/image-jeanette.jpg) center/cover;
+}
+
+.board4-img {
+  background: url(./images/image-patrick.jpg) center/cover;
+}
+
+.board5-img {
+  background: url(./images/image-kira.jpg) center/cover;
+}
+
+.board1-img,
+.board2-img,
+.board3-img,
+.board4-img,
+.board5-img {
+  border-radius: 50%;
+}
+
+/*****align footer*****/
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 20px auto;
+}
+
+/**Media queries**/
+
+/*change grid in ligne*/
+@media screen and (max-width: 550px) {
+  .grid-complex {
+    display: grid;
+    grid-template-columns: 80%; /*colonnes*/
+    grid-template-rows: 444px 240px 222px 384px 438px; /*lignes*/
+    grid-template-areas:
+      "t1"
+      "t2"
+      "t3"
+      "t4"
+      "t5";
+  }
+}
+/*change font size*/
+@media screen and (max-width: 550px) {
+  .board1-text2 p,
+  .board2-text2 p,
+  .board3-text2 p,
+  .board4-text2 p,
+  .board5-text2 p {
+    font-size: 0.9em;
+  }
+}
+/*fix margin (try)*/
+@media screen and (max-width: 550px) {
+  .board1-text2 h2,
+  .board2-text2 h2,
+  .board3-text2 h2,
+  .board4-text2 h2,
+  .board5-text2 h2 {
+    margin: 0 10%;
+  }
+}
+/*fix margin (try)*/
+@media screen and (max-width: 550px) {
+  .board1-text2 p,
+  .board2-text2 p,
+  .board3-text2 p,
+  .board4-text2 p,
+  .board5-text2 p {
+    margin: 5% 10%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    margin: 10% 0 0 0;
+  }
+}
